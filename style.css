@@ -20,6 +20,18 @@ body{
    background-color: var(--primary-color);
 }
 
+
+/* p{
+    
+    border: 1px;
+    border-style: solid;
+    border-color: #ff0000;
+    padding: 0.5rem;
+  
+} */
+
+
+
  div{
     margin: 1rem 0rem;
     text-align: center;
