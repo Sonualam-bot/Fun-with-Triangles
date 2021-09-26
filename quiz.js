@@ -3,7 +3,7 @@ const submitAnswerBtn = document.querySelector('#submit-answer-button');
 
 const outputEl = document.querySelector('#output');
 
-const correctAnswers = ["90°", "right angled"];
+const correctAnswers = ["90°", "right angled", "equilateral triangle", "perimeter"];
 
 function calculateScore() {
     let score = 0;
