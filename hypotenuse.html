@@ -15,11 +15,27 @@
       <a href="area.html">Calculate Area</a>
     </nav>
     <h1>Calculate Hypotenuse</h1>
+    <b
+      ><div style="font-size: larger; border: 1px solid red; padding: 1rem">
+        Hypotenuse- c = sqrt ( a² + b² )
+      </div></b
+    >
 
     <label> a = </label>
-    <input type="number" class="side-input" />
+    <input
+      type="number"
+      class="side-input"
+      min="0"
+      oninput="validity.valid ||(value='')"
+    />
     <label> b = </label>
-    <input type="number" class="side-input" />
+    <input
+      type="number"
+      class="side-input"
+      min="0"
+      oninput="validity.valid
+    ||(value='')"
+    />
     <div>
       <button id="hypotenuse-btn">Calculate Hypotenuse</button>
     </div>

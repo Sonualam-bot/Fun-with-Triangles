@@ -15,13 +15,26 @@
       <a href="area.html">Calculate Area</a>
     </nav>
     <h1>Check Area of a Triangle</h1>
-
-    <!-- <p>Area of a Triangle = 1/2(base * height)</p> -->
+    <b>
+      <div style="font-size: larger; border: 1px solid red; padding: 1rem">
+        Area of a Triangle = 1/2(base * height)
+      </div>
+    </b>
 
     <label><b>Base</b>(in cm)</label>
-    <input type="number" class="side-input" />
+    <input
+      type="number"
+      class="side-input"
+      min="0"
+      oninput="validity.valid ||(value='')"
+    />
     <label><b>Height</b>(in cm)</label>
-    <input type="number" class="side-input" />
+    <input
+      type="number"
+      class="side-input"
+      min="0"
+      oninput="validity.valid ||(value='')"
+    />
     <div>
       <button id="area-btn">Calculate Area</button>
     </div>
