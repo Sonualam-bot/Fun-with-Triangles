@@ -2,36 +2,21 @@ const inputs = document.querySelectorAll('.angle-input');
 const isTriangleBtn = document.querySelector('#is-triangle-btn');
 const outputEl = document.querySelector('#output');
 
-
-
-
-
-function calculateSumOfAngles(angle1, angle2, angle3) {
+function checkAndReturnIsTriangle(angle1, angle2, angle3) {
     const sumOfAngles = angle1 + angle2 + angle3;
-
-    // console.log(sumOfAngles);
-    return sumOfAngles;
+    if (sumOfAngles <= 0 || sumOfAngles > 180) {
+        return "Not a triangle.";
+    } else if (angle1 >= 180 || angle2 >= 180 || angle3 >= 180) {
+        return "The angles form a straight line."
+    } else {
+        return "This form a triangle."
+    }
 }
-
 
 function isTriangle() {
-    const sumOfAngles = calculateSumOfAngles(Number(inputs[0].value), Number(inputs[1].value), Number(inputs[2].value));
-
-    if (sumOfAngles === 180) {
-
-        outputEl.innerText = "Yay, The angles form a triangle"
-    } else if (sumOfAngles === 0) {
-        outputEl.innerText = "Plese enter a valid input "
-    }
-    //  else if (sumOfAngles === [index].null) {
-    //     outputEl.innerText = "please enter a valid input ☝ "
-    // }
-    else {
-
-        outputEl.innerText = "Oh oh! The angles don't form a triangle"
-    }
-
-
+    const returnText = checkAndReturnIsTriangle(Number(inputs[0].value), Number(inputs[1].value), Number(inputs[2].value));
+    outputEl.innerText = returnText;
 }
 
+// ON IS TRIANGLE BUTTON CLICKED
 isTriangleBtn.addEventListener("click", isTriangle);
